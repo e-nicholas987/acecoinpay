@@ -1,0 +1,78 @@
+@import "./styles/reset.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Custom fonts*/
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-ExtralLight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Thin.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .dotted-line {
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      #b8b7b4,
+      #b8b7b4 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .mastercard {
+    box-shadow: -4px 19px 47px 4px #d8e0e9;
+    backdrop-filter: blur(7px);
+  }
+  
+  .disabled-text:disabled {
+    color: #a4a9b8;
+    -webkit-text-fill-color: #a4a9b8;
+    opacity: 1;
+  }
+}
