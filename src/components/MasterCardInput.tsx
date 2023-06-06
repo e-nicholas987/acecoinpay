@@ -45,7 +45,7 @@ const MasterCardInput = () => {
   const handleBackspace = (
     index: number,
     event: React.KeyboardEvent<HTMLInputElement>
-  ) => {
+  ): void => {
     if (
       inputRefs[index].current?.value.length === 0 &&
       event.key === "Backspace" &&

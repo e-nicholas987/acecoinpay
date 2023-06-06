@@ -1,3 +1,3 @@
-export const isValidNumber = (inputValue: string) => {
+export const isValidNumber = (inputValue: string):boolean => {
   return inputValue === "" || /^\d+$/.test(inputValue);
 };
