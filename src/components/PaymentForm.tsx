@@ -45,7 +45,7 @@ const PaymentForm = () => {
   } = useForm<InputValues>({ resolver: validation.payment });
 
   // Handles save and edit fuction fo the card number button
-  const handleButtonClick = () => {
+  const handleButtonClick = (): void => {
     for (const inputValue of paymentDetails.cardNumber) {
       if (inputValue.length < 4) {
         return;
@@ -62,7 +62,7 @@ const PaymentForm = () => {
   const handleChange = async (
     inputLength: number,
     event: ChangeEvent<HTMLInputElement>
-  ) => {
+  ): Promise<void> => {
     const { value, name } = event.target;
     // Restrict input length
     if (value.length <= inputLength && isValidNumber(value)) {
